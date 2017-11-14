@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-    public static class StaticPool
+public static class StaticPool
     {
         private static Dictionary<string, GameObject> listPool = new Dictionary<string, GameObject>();
 
@@ -64,10 +65,11 @@ using UnityEngine;
             }
         }
 
-        /// <summary>
-        /// Remove specific Pool for obj
-        /// </summary>
-        public static void RemovePool(GameObject obj)
+
+    /// <summary>
+    /// Remove specific Pool for obj
+    /// </summary>
+    public static void RemovePool(GameObject obj)
         {
             if (listPool.ContainsKey(obj.name))
             {

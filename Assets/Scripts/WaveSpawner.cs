@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour {
 
-    public Transform enemyPrefab;
+    public GameObject enemyPrefab;
     public float timeBetwenWaves;
     private float countdown;
     private int EnemyNumber=1;
@@ -46,7 +46,8 @@ public class WaveSpawner : MonoBehaviour {
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab);
+        StaticPool.Instantiate(enemyPrefab,enemyPrefab.transform.position);
     }
+
 
 }

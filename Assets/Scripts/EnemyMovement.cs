@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour {
 
         if (pointIndex >= WayPoints.points.Length)
         {
-            Destroy(gameObject);
+            StaticPool.Destroy(gameObject);
             return; 
         }
         target = WayPoints.points[pointIndex];

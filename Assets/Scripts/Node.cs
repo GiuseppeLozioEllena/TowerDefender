@@ -46,7 +46,7 @@ public class Node : MonoBehaviour {
                 return;
 
             GameObject turrent = buildManager.GetTurrentToBuild();         
-            Instantiate(turrent, new Vector3(transform.position.x, transform.position.y + 0.43f, transform.position.z), transform.rotation);
+            Instantiate(turrent, new Vector3(transform.position.x, transform.position.y + 2.1f, transform.position.z), transform.rotation);
             free = false;
         }
     }
